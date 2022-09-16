@@ -1,0 +1,18 @@
+#Latihan1
+
+data_nama=read.delim("clipboard")
+View(data_nama)
+mean(data_nama$Tinggi.Badan)
+str(data_nama)
+
+
+#Latihan2
+data_husein_csv=read.csv("C:/Users/Muhammad Hasan Husei/OneDrive/Documents/Prak Stat/Book1.csv")
+View(data_husein_csv)
+mean(data_husein_csv$Tinggi.Badan)
+str(data_husein_csv)
+
+install.packages("xlsx")
+library("xlsx")
+data_husein_xlsx=read.xlsx("C:/Users/Muhammad Hasan Husei/OneDrive/Documents/Prak Stat/Book1.xlsx",1)
+View(data_husein_xlsx)
