@@ -1,0 +1,50 @@
+#read CSV
+
+data_sanseinn=read.csv("C:/Users/Muhammad Hasan Husei/OneDrive/Documents/Prak Stat/Book1.csv")
+View(data_sanseinn)
+
+#Subset data 
+data_sanseinn.kolom1dan2 <- data_sanseinn[4] 
+View(data_sanseinn.kolom1dan2)
+
+#mengubah nilai suatu variable
+sanseinn <- data_sanseinn[4]
+View(sanseinn)
+sanseinn$Tinggi.Badan <- ifelse(sanseinn$Tinggi.Badan > 160, c("Tinggi"), c("Pendek"))
+View(sanseinn)
+
+#Menambah Variable
+sanseinn$Jurusan<-"Infor 20"
+View(sanseinn)
+sanseinn$Fakultas<-"FTI"
+View(sanseinn)
+
+#Delete variable
+sanseinn$Fakultas<-NULL
+View(sanseinn)
+
+#Merge data frame -> Kolom
+nama_sex= data_sanseinn[,1:2]
+View(nama_sex)
+
+ang_ting= data_sanseinn[,3:4]
+View(ang_ting)
+
+gabung=cbind(nama_sex,ang_ting)
+View(gabung)
+
+#Merge baris
+bar=data_sanseinn[1:5,]
+View(bar)
+
+baris=data_sanseinn[25:30,]
+View(baris)
+
+gabungan=rbind(bar,baris)
+View(gabungan)
+
+#Sort Data Frame
+sorrttt=data_sanseinn[order(data_sanseinn$Waktu.Perjalanan),]
+View(sorrttt)
+
+
