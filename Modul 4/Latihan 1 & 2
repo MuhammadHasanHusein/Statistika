@@ -1,0 +1,11 @@
+#Latihan 1
+data=read.delim("clipboard")
+View(data)
+
+t.test(data$Volume,conf.level = 0.9)
+t.test(data$Volume,conf.level = 0.95)
+
+#Latihan 2
+data = read.delim("clipboard")
+View(data)
+t.test(data$Volume, conf.level = 0.5)
