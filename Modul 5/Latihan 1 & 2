@@ -1,0 +1,13 @@
+#Latihan 1
+latihan1Hasan =read.delim("clipboard")
+View(latihan1Hasan)
+str(latihan1Hasan)
+mean(latihan1Hasan$Volume)
+t.test(latihan1Hasan$Volume, mu=10)
+
+#latihan 2
+latihan2Hasan=read.delim("clipboard")
+View(latihan2Hasan)
+str(latihan2Hasan)
+mean(latihan2Hasan$pendapatan)
+t.test(latihan2Hasan$pendapatan,mu=14500)
