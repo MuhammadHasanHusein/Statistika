@@ -1,0 +1,21 @@
+# Latihan 1
+df_nama= read.delim("clipboard")
+View(df_nama)
+
+model <- aov(korosi~metode, data=df_nama)
+summary(model)
+
+tukey.test <- TukeyHSD(model)
+tukey.test
+
+
+
+#lat 2 - Tugas
+df_nama=PlantGrowth
+View(df_nama)
+
+model <- aov(weight~group, data=df_nama)
+summary(model)
+
+tukey.test <- TukeyHSD(model)
+tukey.test
