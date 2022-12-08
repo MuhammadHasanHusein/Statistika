@@ -1,0 +1,17 @@
+#latihan 
+df_nama=read.delim("clipboard")
+head(df_nama)
+model_reg=lm(df_nama$y~df_nama$x)
+summary(model_reg)
+
+#Tugas
+df_hasan=read.delim("clipboard")
+df_hasan$brick_dummy <- ifelse(df_hasan$Brick == "Yes", 1,0)
+df_hasan$N_dummy1 <- ifelse(df_hasan$Neighborhood =="West", 1,0)
+df_hasan$N_dummy2 <- ifelse(df_hasan$Neighborhood =="North", 1,0)
+model =lm(df_hasan$Price~df_hasan$SqFt+df_hasan$Bedrooms+df_hasan$Bathrooms+df_hasan$brick_dummy+df_hasan$N_dummy1+df_hasan$N_dummy2)
+summary(model)
+
+
+by(df_hasan$Price, df_hasan$Neighborhood, mean)
+by(df_hasan$Price, df_hasan$Brick, mean)
