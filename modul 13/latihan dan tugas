@@ -1,0 +1,29 @@
+peho=read.delim("clipboard")
+View(peho)
+wilcox.test(peho$Sebelum,peho$Setelah,paired=TRUE)
+
+#2
+ikhlas=read.delim("clipboard")
+View(ikhlas)
+wilcox.test(ikhlas$Sebelum,ikhlas$Sesudah,paired=TRUE)
+
+#3
+sohib=read.delim("clipboard")
+View(sohib)
+
+wilcox.test(sohib$obat,sohib$grup,paired=TRUE)
+rank(sohib$obat)
+
+#Lat Ketiga - Tugas
+p = read.delim("clipboard")
+head (p)
+wilcox.test(p$Ganjil,p$Genap,paired=TRUE)
+rank(p$Ganjil)
+rank(p$Genap)
+
+#Lat ke4 - Tugas
+h = read.delim("clipboard")
+head(h)
+wilcox.test(h$caffeine,h$placebo,paired=TRUE)
+rank(h$caffeine)
+rank(h$placebo)
